@@ -52,7 +52,7 @@ const lacteo2 = new producto("Manteca", "La Serenisima", 110, 90)
 
 const lacteo3 = new producto("Queso", "La Serenisima", 60, 150)
 
-let lacteos = [lacteo1, lacteo2, lacteo3, lacteo4]
+let lacteos = [lacteo1, lacteo2, lacteo3]
 
 
 let carrito = []
@@ -63,5 +63,10 @@ if(localStorage.getItem("carrito")){
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
-let divFrutas = document.querySelector("#divFrutas")
-
+Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Tu producto ha sido agregado al carrito',
+    showConfirmButton: false,
+    timer: 1500
+  })
